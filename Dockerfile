@@ -1,6 +1,6 @@
 FROM node:25.1.0-bookworm
 
-RUN npm i -g opencode-ai@latest
+RUN npm i -g opencode-ai@v1.0.51
 
 ENV OPENCODE_HOSTNAME=0.0.0.0
 ENV OPENCODE_PORT=80
