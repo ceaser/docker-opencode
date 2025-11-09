@@ -14,7 +14,7 @@ run:
 	docker run -it $(ARGS) --rm --name "$(DOCKER_APPNAME)" "$(DOCKER_REPO)/$(DOCKER_APPNAME):latest"
 
 sh:
-	docker run -it $(ARGS) --entrypoint sh --rm --name "$(DOCKER_APPNAME)" "$(DOCKER_REPO)/$(DOCKER_APPNAME):latest"
+	docker run -it $(ARGS) --entrypoint bash --rm --name "$(DOCKER_APPNAME)" "$(DOCKER_REPO)/$(DOCKER_APPNAME):latest"
 
 clean:
 	-docker stop ${DOCKER_APPNAME}
