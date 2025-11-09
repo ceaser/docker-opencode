@@ -1,6 +1,6 @@
 .PHONY: build run stop shell clean distclean push pull
 
-DOCKER_REPO=ghcr.io/ceaser/docker-opencode
+DOCKER_REPO=ghcr.io/ceaser
 DOCKER_APPNAME=docker-opencode
 VERSION=$(shell git describe --tags 2> /dev/null || echo "latest")
 ARGS= --dns 1.1.1.1
