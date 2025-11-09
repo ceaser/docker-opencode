@@ -1,4 +1,4 @@
-.PHONY: build run stop shell clean distclean push pull
+.PHONY: build run stop sh clean push pull ip
 
 DOCKER_REPO=ghcr.io/ceaser
 DOCKER_APPNAME=docker-opencode
@@ -30,5 +30,5 @@ pull:
 	docker pull "$(DOCKER_REPO)/$(DOCKER_APPNAME):latest
 
 ip:
-	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' dev
+	-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "${DOCKER_APPNAME}"
 
